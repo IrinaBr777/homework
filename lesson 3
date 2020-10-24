@@ -1,7 +1,48 @@
-5) *Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
-for(…){// здесь пусто}
+1)С помощью цикла while вывести все простые числа в промежутке от 0 до 100
 
-6) *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+        let n = 2;
+        let arr = [];
+        while(n < 100) {
+            if(n % 2 == 0) {
+                n++;
+                arr.push(n);
+                
+            } else {
+                n++;
+            }
+            n++;
+        }
+        console.log(arr)
+2) 3) Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. Задачи:
+a) Организовать такой массив для хранения товаров в корзине;
+b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+  
+  let products = [
+            {prodName: "Молоко", prodPrice: 70},
+            {prodName: "Сыр", prodPrice: 150},
+            {prodName: "Яйца", prodPrice: 80},
+            {prodName: "Масло", prodPrice: 120},
+            {prodName: "Картофель", prodPrice: 50},
+            {prodName: "Лук", prodPrice: 40},
+            {prodName: "Сметана", prodPrice: 75},
+            {prodName: "Капуста", prodPrice: 50},
+            {prodName: "Говядина", prodPrice: 500}
+        ];
+
+        function countBasketPrice(prodList) {
+            let totalCost = 0;
+            prodList.forEach(function(item) {
+                totalCost += item.prodPrice;
+            });
+            return totalCost;
+        }
+        console.log(countBasketPrice(products));
+4) *Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+for(…){// здесь пусто}
+ 
+    for(var x = 0; x < 9; x++, console.log(x)){};
+
+5) *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
 
     let s = '';
     for(let i = 0; i < 20; i++ ) {
